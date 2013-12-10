@@ -1,7 +1,7 @@
 require 'rspec'
 
 class Calculator
-  Result = Struct.new(:sum)
+  class Result < Struct.new(:sum); end
 
   def initialize(addend)
     @addend = addend
