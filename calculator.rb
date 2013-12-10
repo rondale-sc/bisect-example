@@ -1,6 +1,8 @@
 require 'rspec'
 
 class Calculator
+  Result = Struct.new(:sum)
+
   def initialize(addend)
     @addend = addend
   end
@@ -10,7 +12,7 @@ class Calculator
   end
 
   def to(value)
-    addend + value
+    Result.new(addend + value)
   end
 
   private
